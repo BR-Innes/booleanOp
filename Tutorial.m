@@ -1,6 +1,13 @@
-%% BOOLEAN OPERATORS: A patronising Matlab tutorial 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   SETTING UP (AND COVERTING TO) LOGICAL ARRAYS / MATRICES
+%  BOOLEAN OPERATORS (A PATRONISING MATLAB TUTORIAL)             
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% REFERENCES: 
+% https://en.wikipedia.org/wiki/Boolean_algebra
+% http://uk.mathworks.com/help/matlab/logical-operations.html
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  SETTING UP (AND COVERTING TO) LOGICAL ARRAYS / MATRICES               
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % You can use 'true()' or 'false()' to do this:
@@ -30,15 +37,15 @@ allZeros = logical(allZeros);
 % 1: Run 'exercise1.m' - you'll get variables 'x' (data) and 'i' (an index)
 % 2: Type 'getData = x(i)'; 
     % this attempt to use 'i' to index 'x' will fail: fix it! 
-    % when fixed you'll get a column [6; 7; 5; 4; 9]; 
+    % A: [6; 7; 5; 4; 9]; 
 
 % SOLUTION(FIX): 
-% islogical(index); 
-% index = logical(index); 
-% x = x(index); 
+% islogical(i); 
+% index = logical(i); 
+% getData = x(i); 
 
 % SOLUTION(WORK AROUND):
-% x = x(index==true);
+% getData = x(i==true);
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -69,9 +76,9 @@ visual = [true; true; false; false];
 % You can also get this by running 'exercise2.m'
 
 % We want to use the operators above to work out the sum of the data when:
-% 1. Both stimuli were present
-% 2. Any stimulus was present
-% 3. Only an audio stimulus was present
+% 1. Both stimuli were present (conjunction) 
+% 2. Any stimulus was present (disjunction) 
+% 3. Only an audio stimulus was present (negation) 
 % 4. When either stimulus was present, but not both 
 
 % SOLUTION: 
@@ -136,4 +143,3 @@ allFalse(liar) = false;
 %    if any(expEvent(:, 2))
 %       disp('beep-boop'); % you'd put actual code here though  
 %    end 
-
