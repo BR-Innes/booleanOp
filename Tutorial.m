@@ -71,21 +71,21 @@ truXOR = [sOne, sTwo, xor(sOne, sTwo)]; % xor (if EITHER but not BOTH)
 % EXERCISE 2:
 % Here's 4 trials-worth of data, along with what stimuli was present:
 expData = [130; 146; 127; 189]; 
-audio = [true; false; true; false];
-visual = [true; true; false; false];
+colour = [true; false; true; false];
+moving = [true; true; false; false];
 % You can also get this by running 'exercise2.m'
 
 % We want to use the operators above to work out the sum of the data when:
 % 1. Both stimuli were present (conjunction) 
 % 2. Any stimulus was present (disjunction) 
-% 3. Only an audio stimulus was present (negation) 
+% 3. Only a moving stimulus was present (negation) 
 % 4. When either stimulus was present, but not both 
 
 % SOLUTION: 
-% sumAND = sum(expData(and(audio, visual))); % A: 130
-% sumOR = sum(expData(or(audio, visual))); % A: 403
-% sumNOT = sum(expData(not(audio))); % A: 335
-% sumXOR = sum(expData(xor(audio, visual))); % A: 273
+% sumAND = sum(expData(and(colour, moving))); % A: 130
+% sumOR = sum(expData(or(colour, moving))); % A: 403
+% sumNOT = sum(expData(not(colour))); % A: 335
+% sumXOR = sum(expData(xor(colour, moving))); % A: 273
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
