@@ -41,7 +41,7 @@ allZeros = logical(allZeros);
 
 % SOLUTION(FIX): 
 % islogical(i); 
-% index = logical(i); 
+% i = logical(i); 
 % getData = x(i); 
 
 % SOLUTION(WORK AROUND):
@@ -135,7 +135,7 @@ allFalse(liar) = false;
 % SOLUTION
 % 1. expEventTS = expEvent(find(expEvent(:, 2)), 1); % A: 63:67
 % 2. expEventTSC = expEvent(find(expEvent(:, 2)>20), 1); % A: 64:66
-% 3. expEventStart = expEvent(find(expEvent(:, 2), 1, 'first'), 1); % A:63
+% 3. expEventStart = expEvent(find(expEvent(:, 2), 1, 'first'), 1); % A: 63
 %    expEventEnd = expEvent(find(expEvent(:, 2), 1, 'last'), 1); % A: 67
 %    OR could use min/max on expEventsTS
 %    expEventStartEnd = [min(expEventTS), max(expEventTS)]; 
