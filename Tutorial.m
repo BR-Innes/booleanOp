@@ -127,9 +127,9 @@ allFalse(liar) = false;
 
 % We want to get certain timestamps to use for indexing later. 
 % 1. Can we get all the timestamps for when the event is happening?
-% 2. Can we get the start and end timepoints only?
-% 3. Can we get the timepoints for when the data exceeds a criteron value?
+% 2. Can we get the timepoints for when the data exceeds a criteron value?
     % e.g. only timestamps when datapoint is > 20? 
+% 3. Can we get the start and end timepoints only?
 % 4. Can we rewrite the code to avoid a crash if no event occurs?
 
 % SOLUTION
